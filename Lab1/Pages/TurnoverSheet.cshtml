@@ -1,0 +1,107 @@
+@page
+@model MainTablesModel
+@{
+  ViewData["Title"] = "Обратная ведомость";
+}
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Квартира</th>
+      <th>Январь</th>
+      <th>Февраль</th>
+      <th>Март</th>
+      <th>Апрель</th>
+      <th>Май</th>
+      <th>Июнь</th>
+      <th>Июль</th>
+      <th>Август</th>
+      <th>Сентябрь</th>
+      <th>Октябрь</th>
+      <th>Ноябрь</th>
+      <th>Декабрь</th>
+      <th><a class="btn btn-primary btn-sn" href="/Charges/Add"><i class="fa-solid fa-plus"></i>Добавить</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var charges in Model.chargesList)
+    {
+      <tr>
+        <td>@charges.Apartment</td>
+        <td>@charges.January</td>
+        <td>@charges.February</td>
+        <td>@charges.March</td>
+        <td>@charges.April</td>
+        <td>@charges.May</td>
+        <td>@charges.June</td>
+        <td>@charges.July</td>
+        <td>@charges.August</td>
+        <td>@charges.September</td>
+        <td>@charges.October</td>
+        <td>@charges.November</td>
+        <td>@charges.December</td>
+        <td>
+          <a class="btn btn-light btn-sn" href="/Charges/Edit?apartment=@charges.Apartment"><i
+              class="fa-regular fa-pen-to-square"></i></a>
+          <a class="btn btn-danger btn-sn" href="/Charges/Delete?apartment=@charges.Apartment"><i
+              class="fa-solid fa-trash"></i></a>
+        </td>
+      </tr>
+
+    }
+  </tbody>
+</table>
+
+<h2>Платежи по лицевому счету</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Квартира</th>
+      <th>Январь</th>
+      <th>Февраль</th>
+      <th>Март</th>
+      <th>Апрель</th>
+      <th>Май</th>
+      <th>Июнь</th>
+      <th>Июль</th>
+      <th>Август</th>
+      <th>Сентябрь</th>
+      <th>Октябрь</th>
+      <th>Ноябрь</th>
+      <th>Декабрь</th>
+      <th><a class="btn btn-primary btn-sn" href="/Payments/Add"><i class="fa-solid fa-plus"></i>Добавить</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var payments in Model.paymentsList)
+    {
+      <tr>
+        <td>@payments.Apartment</td>
+        <td>@payments.January</td>
+        <td>@payments.February</td>
+        <td>@payments.March</td>
+        <td>@payments.April</td>
+        <td>@payments.May</td>
+        <td>@payments.June</td>
+        <td>@payments.July</td>
+        <td>@payments.August</td>
+        <td>@payments.September</td>
+        <td>@payments.October</td>
+        <td>@payments.November</td>
+        <td>@payments.December</td>
+        <td>
+          <a class="btn btn-light btn-sn" href="/Payments/Edit?apartment=@payments.Apartment"><i
+              class="fa-regular fa-pen-to-square"></i></a>
+          <a class="btn btn-danger btn-sn" href="/Payments/Delete?apartment=@payments.Apartment"><i
+              class="fa-solid fa-trash"></i></a>
+        </td>
+      </tr>
+
+    }
+  </tbody>
+</table>
+
+<div class="col-sm-3 d-grid">
+  <button class="btn btn-outline-primary" onclick="location.href='/'">Выйти</button>
+</div>

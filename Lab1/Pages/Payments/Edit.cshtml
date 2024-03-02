@@ -1,0 +1,69 @@
+@page
+@model Payments.EditModel
+@{
+}
+
+<br>
+
+<h2>Изменить список платежей по лицевому счету</h2>
+
+<form method="post">
+  @if (Model.ErrorMessage.Length > 0)
+  {
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>@Model.ErrorMessage</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+    </div>
+  }
+
+  <div class="input-group mb-3">
+    <span class="input-group-text">№</span>
+    <input type="number" min="0" class="form-control" placeholder="Номер квартиры" name="Apartment"
+      value="@Model.paymentsList.Apartment" disabled>
+  </div>
+
+  <div class="input-group mb-3">
+    <span class="input-group-text">Начисления</span>
+    <input type="text" pattern="\d+(,\d{2})?" step="0.01" min="0" placeholder="Январь" class="form-control"
+      name="January" value="@Model.paymentsList.January" required>
+    <input type="text" pattern="\d+(,\d{2})?" step="0.01" min="0" placeholder="Февраль" class="form-control"
+      name="February" value="@Model.paymentsList.February" required>
+    <input type="text" pattern="\d+(,\d{2})?" step="0.01" min="0" placeholder="Март" class="form-control" name="March"
+      value="@Model.paymentsList.March" required>
+    <input type="text" pattern="\d+(,\d{2})?" step="0.01" min="0" placeholder="Апрель" class="form-control" name="April"
+      value="@Model.paymentsList.April" required>
+    <input type="text" pattern="\d+(,\d{2})?" step="0.01" min="0" placeholder="Май" class="form-control" name="May"
+      value="@Model.paymentsList.May" required>
+    <input type="text" pattern="\d+(,\d{2})?" step="0.01" min="0" placeholder="Июнь" class="form-control" name="June"
+      value="@Model.paymentsList.June" required>
+    <input type="text" pattern="\d+(,\d{2})?" step="0.01" min="0" placeholder="Июль" class="form-control" name="July"
+      value="@Model.paymentsList.July" required>
+    <input type="text" pattern="\d+(,\d{2})?" step="0.01" min="0" placeholder="Август" class="form-control"
+      name="August" value="@Model.paymentsList.August" required>
+    <input type="text" pattern="\d+(,\d{2})?" step="0.01" min="0" placeholder="Сентябрь" class="form-control"
+      name="September" value="@Model.paymentsList.September" required>
+    <input type="text" pattern="\d+(,\d{2})?" step="0.01" min="0" placeholder="Октябрь" class="form-control"
+      name="October" value="@Model.paymentsList.October" required>
+    <input type="text" pattern="\d+(,\d{2})?" step="0.01" min="0" placeholder="Ноябрь" class="form-control"
+      name="November" value="@Model.paymentsList.November" required>
+    <input type="text" pattern="\d+(,\d{2})?" step="0.01" min="0" placeholder="Декабрь" class="form-control"
+      name="December" value="@Model.paymentsList.December" required>
+  </div>
+
+  @if (Model.SuccessMessage.Length > 0)
+  {
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>@Model.SuccessMessage</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+    </div>
+  }
+
+  <div class="row mb-3">
+    <div class="offset-sm-3 col-sm-3 d-grid">
+      <button type="submit" class="btn btn-primary">Добавить</button>
+    </div>
+    <div class="col-sm-3 d-grid">
+      <button class="btn btn-outline-primary" onclick="location.href='/MainTables'" type="button">Выйти</button>
+    </div>
+  </div>
+</form>

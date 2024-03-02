@@ -10,6 +10,7 @@ public class MainTablesModel : PageModel
   DataContextDapper _dapper;
   public IEnumerable<ChargesList> chargesList;
   public IEnumerable<PaymentsList> paymentsList;
+  public IEnumerable<SaldoList> saldoList;
   public MainTablesModel(IConfiguration config)
   {
     _dapper = new DataContextDapper(config);
@@ -24,5 +25,9 @@ public class MainTablesModel : PageModel
     sql = @"select *
       from public.payments";
     paymentsList = _dapper.LoadData<PaymentsList>(sql);
+
+    sql = @"select *
+      from public.saldo";
+    saldoList = _dapper.LoadData<SaldoList>(sql);
   }
 }

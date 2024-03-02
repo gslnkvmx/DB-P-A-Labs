@@ -77,8 +77,6 @@ public class AddModel : PageModel
         paymentsListToAdd.December.ToString("0.00", CultureInfo.InvariantCulture)
       + ");";
 
-    System.Console.WriteLine(sql);
-
     try
     {
       _dapper.ExecuteSql(sql);

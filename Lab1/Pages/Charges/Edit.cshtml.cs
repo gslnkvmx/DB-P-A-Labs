@@ -88,5 +88,7 @@ public class EditModel : PageModel
       return;
     }
     SuccessMessage = "Успешно изменено!";
+
+    Response.Redirect("/Saldo/Edit?apartment=" + Request.Query["apartment"]);
   }
 }

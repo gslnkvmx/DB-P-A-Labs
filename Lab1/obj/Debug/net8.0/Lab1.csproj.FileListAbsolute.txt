@@ -32,3 +32,4 @@ C:\code projects\UniLabs\Lab1\bin\Debug\net8.0\Dapper.dll
 C:\code projects\UniLabs\Lab1\bin\Debug\net8.0\Npgsql.dll
 C:\code projects\UniLabs\Lab1\obj\Debug\net8.0\Lab1.csproj.AssemblyReference.cache
 C:\code projects\UniLabs\Lab1\obj\Debug\net8.0\Lab1.csproj.CopyComplete
+C:\code projects\UniLabs\Lab1\obj\Debug\net8.0\Lab1.sourcelink.json

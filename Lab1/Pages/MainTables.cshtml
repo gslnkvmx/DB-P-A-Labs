@@ -103,6 +103,53 @@
   </tbody>
 </table>
 
-<div class="col-sm-3 d-grid">
-  <button class="btn btn-outline-primary" onclick="location.href='/'">Выйти</button>
-</div>
+<h2>Сальдо по лицевому счету</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Квартира</th>
+      <th>Входное сальдо</th>
+      <th>Январь</th>
+      <th>Февраль</th>
+      <th>Март</th>
+      <th>Апрель</th>
+      <th>Май</th>
+      <th>Июнь</th>
+      <th>Июль</th>
+      <th>Август</th>
+      <th>Сентябрь</th>
+      <th>Октябрь</th>
+      <th>Ноябрь</th>
+      <th>Декабрь</th>
+      <th>Выходное сальдо</th>
+      <th><a class="btn btn-primary btn-sn" href="/Saldo/Add"><i class="fa-solid fa-plus"></i>Добавить</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var saldo in Model.saldoList)
+    {
+      <tr>
+        <td>@saldo.Apartment</td>
+        <td>@saldo.InSaldo</td>
+        <td>@saldo.January</td>
+        <td>@saldo.February</td>
+        <td>@saldo.March</td>
+        <td>@saldo.April</td>
+        <td>@saldo.May</td>
+        <td>@saldo.June</td>
+        <td>@saldo.July</td>
+        <td>@saldo.August</td>
+        <td>@saldo.September</td>
+        <td>@saldo.October</td>
+        <td>@saldo.November</td>
+        <td>@saldo.December</td>
+        <td>@saldo.OutSaldo</td>
+        <td>
+          <a class="btn btn-danger btn-sn" href="/Saldo/Delete?apartment=@saldo.Apartment"><i
+              class="fa-solid fa-trash"></i></a>
+        </td>
+      </tr>
+
+    }
+  </tbody>
+</table>

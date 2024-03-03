@@ -52,7 +52,11 @@ public class AddModel : PageModel
 
     try
     {
-      _dapper.ExecuteSql(sql);
+      if (_dapper.ExecuteSqlWithRows(sql) == 0)
+      {
+        ErrorMessage = "Недостаточно данных о данной кваритре!\nСначала внесите данные о платежах и начислениях.";
+        return;
+      };
     }
     catch (Exception ex)
     {

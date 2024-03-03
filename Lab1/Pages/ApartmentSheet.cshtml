@@ -1,0 +1,26 @@
+@page
+@model ApartmentSheetModel
+@{
+  ViewData["Title"] = "Получить ведомость по квартире";
+}
+
+<form method="post">
+  @if (Model.ErrorMessage.Length > 0)
+  {
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>@Model.ErrorMessage</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+    </div>
+  }
+
+  <div class="input-group mb-3">
+    <label>Введите номер квартиры:</label>
+    <input type="number" min="0" class="form-control" placeholder="Номер квартиры" name="Apartment">
+  </div>
+
+  <div class="row mb-3">
+    <div class="offset-sm-3 col-sm-3 d-grid">
+      <button type="submit" class="btn btn-primary">Добавить</button>
+    </div>
+  </div>
+</form>

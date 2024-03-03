@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\code projects\UniLabs\Lab1
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/code projects/UniLabs/Lab1/Pages/ApartmentSheet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBhcnRtZW50U2hlZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/code projects/UniLabs/Lab1/Pages/Charges/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhcmdlc1xBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

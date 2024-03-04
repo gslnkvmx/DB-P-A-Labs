@@ -8,11 +8,13 @@ namespace Lab1.Pages;
 public class ApartmentSheetModel : PageModel
 {
   DataContextDapper _dapper;
-  public ChargesList chargesList;
-  public PaymentsList paymentsList;
+  public ChargesList chargesList = new ChargesList();
+  public PaymentsList paymentsList = new PaymentsList();
 
   public int sumCharges;
   public int sumPayments;
+
+  public int dolg;
   string _errorMessage = "";
 
   public string ErrorMessage { get => _errorMessage; set => _errorMessage = value; }
@@ -25,24 +27,16 @@ public class ApartmentSheetModel : PageModel
 
   public void OnPost(int? Apartment)
   {
-    string sql = @"select 
-    charges.apartment,
-    charges.january,
-    charges.february,
-    charges.march,
-    charges.april,
-    charges.may,
-    charges.june,
-    charges.july,
-    charges.august,
-    charges.september,
-    charges.october,
-    charges.november,
-    charges.december
-      from public.charges WHERE apartment = " + Apartment + ";";
+    System.Console.WriteLine(Apartment);
+    string sql = @"select * from public.charges WHERE apartment = " + Apartment + ";";
+
+    if(_dapper.LoadDataSingle<ChargesList>(sql) == null){
+       ErrorMessage = "Недостаточно данных по квартире с данным номером!";
+       return;}
+
     chargesList = _dapper.LoadDataSingle<ChargesList>(sql);
 
-    sql = @"select 
+        sql = @"select 
       apartment+
       january+
       february+
@@ -58,24 +52,19 @@ public class ApartmentSheetModel : PageModel
       december
       from public.charges WHERE apartment = " + Apartment + ";";
 
-    sumCharges = _dapper.LoadDataSingle<int>(sql);
+      sumCharges = _dapper.LoadDataSingle<int>(sql);
+      
 
-    sql = @"select 
-    payments.apartment,
-    payments.january,
-    payments.february,
-    payments.march,
-    payments.april,
-    payments.may,
-    payments.june,
-    payments.july,
-    payments.august,
-    payments.september,
-    payments.october,
-    payments.november,
-    payments.december
-      from public.payments WHERE apartment = " + Apartment + ";";
+    sql = @"select * from public.payments WHERE apartment = " + Apartment + ";";
+
+      System.Console.WriteLine(_dapper.ExecuteSqlWithRows(sql));
+      System.Console.WriteLine(sql);
+
     paymentsList = _dapper.LoadDataSingle<PaymentsList>(sql);
+
+    if(_dapper.LoadDataSingle<ChargesList>(sql) == null){
+       ErrorMessage = "Недостаточно данных по квартире с данным номером!";
+       return;}
 
     sql = @"select 
       apartment+
@@ -91,8 +80,10 @@ public class ApartmentSheetModel : PageModel
       october+
       november+
       december
-      from public.payments WHERE apartment = " + Apartment + ";";
+      from public.payments WHERE apartment = '" + Apartment + "';";
 
     sumPayments = _dapper.LoadDataSingle<int>(sql);
-  }
+
+    dolg = sumCharges - sumPayments;
+}
 }

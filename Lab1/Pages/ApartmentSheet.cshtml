@@ -13,14 +13,104 @@
     </div>
   }
 
+  <label>Введите номер квартиры:</label>
   <div class="input-group mb-3">
-    <label>Введите номер квартиры:</label>
     <input type="number" min="0" class="form-control" placeholder="Номер квартиры" name="Apartment">
   </div>
 
   <div class="row mb-3">
     <div class="offset-sm-3 col-sm-3 d-grid">
-      <button type="submit" class="btn btn-primary">Добавить</button>
+      <button type="submit" class="btn btn-primary">Получить ведомость</button>
     </div>
   </div>
 </form>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>№</th>
+      <th></th>
+      <th>Январь</th>
+      <th>Февраль</th>
+      <th>Март</th>
+      <th>Апрель</th>
+      <th>Май</th>
+      <th>Июнь</th>
+      <th>Июль</th>
+      <th>Август</th>
+      <th>Сентябрь</th>
+      <th>Октябрь</th>
+      <th>Ноябрь</th>
+      <th>Декабрь</th>
+      <th>Сумма</th>
+      <th>Долг</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td>
+          @Model.chargesList.Apartment
+        </td>
+        <th scope="row">
+          Начисл.<br />
+          Платеж<br />
+        </th>
+        <td>
+          @Model.chargesList.January<br />
+          @Model.paymentsList.January<br />
+        </td>
+        <td>
+          @Model.chargesList.February<br />
+          @Model.paymentsList.February <br />
+        </td>
+        <td>
+          @Model.chargesList.March <br />
+          @Model.paymentsList.March <br />
+        </td>
+        <td>
+          @Model.chargesList.April <br />
+          @Model.paymentsList.April <br />
+        </td>
+        <td>
+          @Model.chargesList.May <br />
+          @Model.paymentsList.May <br />
+        </td>
+        <td>
+          @Model.chargesList.June <br />
+          @Model.paymentsList.June <br />
+        </td>
+        <td>
+          @Model.chargesList.July <br />
+          @Model.paymentsList.July <br />
+        </td>
+        <td>
+          @Model.chargesList.August <br />
+          @Model.paymentsList.August <br />
+        </td>
+        <td>
+          @Model.chargesList.September <br />
+          @Model.paymentsList.September <br />
+        </td>
+        <td>
+          @Model.chargesList.October <br />
+          @Model.paymentsList.October <br />
+        </td>
+        <td>
+          @Model.chargesList.November <br />
+          @Model.paymentsList.November <br />
+
+        </td>
+        <td>
+          @Model.chargesList.December <br />
+          @Model.paymentsList.December <br />
+        </td>
+        <td>
+          <strong>@Model.sumCharges </strong><br />
+          <strong>@Model.sumPayments</strong> <br />
+        </td>
+        <td>
+          <strong>@Model.dolg</strong>
+        </td>
+      </tr>
+  </tbody>
+</table>

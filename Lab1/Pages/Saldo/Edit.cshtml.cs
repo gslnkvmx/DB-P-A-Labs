@@ -34,7 +34,9 @@ public class EditModel : PageModel
       "public.charges.December - public.payments.December AS December " +
       "FROM public.charges JOIN public.payments ON public.charges.Apartment=public.payments.Apartment JOIN public.saldo ON public.payments.Apartment=public.saldo.Apartment WHERE charges.apartment = " + apartment + ";";
 
-    saldoList = _dapper.LoadDataSingle<SaldoList>(sql);
+    if(_dapper.ExecuteSqlWithRows(sql) > 0) {
+            saldoList = _dapper.LoadDataSingle<SaldoList>(sql);
+        }
 
     string sqlUpdate = @"UPDATE public.saldo SET january = insaldo + " + saldoList.January.ToString("0.00", CultureInfo.InvariantCulture) + " WHERE apartment= " + apartment + ";" +
       "UPDATE public.saldo SET February = january + " + saldoList.February.ToString("0.00", CultureInfo.InvariantCulture) + " WHERE apartment= " + apartment + ";" +

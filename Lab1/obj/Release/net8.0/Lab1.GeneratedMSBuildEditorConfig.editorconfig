@@ -9,79 +9,77 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Lab1
 build_property.RootNamespace = Lab1
-build_property.ProjectDir = C:\Users\maxgu\source\repos\DB-P-A-Labs\Lab1\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
-build_property.RazorLangVersion = 8.0
+build_property.ProjectDir = C:\Users\maxgu\Source\Repos\DB-P-A-Labs\Lab1\
+build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\maxgu\source\repos\DB-P-A-Labs\Lab1
+build_property.MSBuildProjectDirectory = C:\Users\maxgu\Source\Repos\DB-P-A-Labs\Lab1
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/maxgu/source/repos/DB-P-A-Labs/Lab1/Pages/ApartmentSheet.cshtml]
+[C:/Users/maxgu/Source/Repos/DB-P-A-Labs/Lab1/Pages/ApartmentSheet.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBhcnRtZW50U2hlZXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/maxgu/source/repos/DB-P-A-Labs/Lab1/Pages/Charges/Add.cshtml]
+[C:/Users/maxgu/Source/Repos/DB-P-A-Labs/Lab1/Pages/Charges/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhcmdlc1xBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/maxgu/source/repos/DB-P-A-Labs/Lab1/Pages/Charges/Delete.cshtml]
+[C:/Users/maxgu/Source/Repos/DB-P-A-Labs/Lab1/Pages/Charges/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhcmdlc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/maxgu/source/repos/DB-P-A-Labs/Lab1/Pages/Charges/Edit.cshtml]
+[C:/Users/maxgu/Source/Repos/DB-P-A-Labs/Lab1/Pages/Charges/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhcmdlc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/maxgu/source/repos/DB-P-A-Labs/Lab1/Pages/Error.cshtml]
+[C:/Users/maxgu/Source/Repos/DB-P-A-Labs/Lab1/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/maxgu/source/repos/DB-P-A-Labs/Lab1/Pages/MainTables.cshtml]
+[C:/Users/maxgu/Source/Repos/DB-P-A-Labs/Lab1/Pages/MainTables.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFpblRhYmxlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/maxgu/source/repos/DB-P-A-Labs/Lab1/Pages/Payments/Add.cshtml]
+[C:/Users/maxgu/Source/Repos/DB-P-A-Labs/Lab1/Pages/Payments/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF5bWVudHNcQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/maxgu/source/repos/DB-P-A-Labs/Lab1/Pages/Payments/Delete.cshtml]
+[C:/Users/maxgu/Source/Repos/DB-P-A-Labs/Lab1/Pages/Payments/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF5bWVudHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/maxgu/source/repos/DB-P-A-Labs/Lab1/Pages/Payments/Edit.cshtml]
+[C:/Users/maxgu/Source/Repos/DB-P-A-Labs/Lab1/Pages/Payments/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF5bWVudHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/maxgu/source/repos/DB-P-A-Labs/Lab1/Pages/Saldo/Add.cshtml]
+[C:/Users/maxgu/Source/Repos/DB-P-A-Labs/Lab1/Pages/Saldo/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FsZG9cQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/maxgu/source/repos/DB-P-A-Labs/Lab1/Pages/Saldo/Delete.cshtml]
+[C:/Users/maxgu/Source/Repos/DB-P-A-Labs/Lab1/Pages/Saldo/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FsZG9cRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/maxgu/source/repos/DB-P-A-Labs/Lab1/Pages/Saldo/Edit.cshtml]
+[C:/Users/maxgu/Source/Repos/DB-P-A-Labs/Lab1/Pages/Saldo/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FsZG9cRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/maxgu/source/repos/DB-P-A-Labs/Lab1/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/maxgu/Source/Repos/DB-P-A-Labs/Lab1/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/maxgu/source/repos/DB-P-A-Labs/Lab1/Pages/TurnoverSheet.cshtml]
+[C:/Users/maxgu/Source/Repos/DB-P-A-Labs/Lab1/Pages/TurnoverSheet.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHVybm92ZXJTaGVldC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/maxgu/source/repos/DB-P-A-Labs/Lab1/Pages/_ViewImports.cshtml]
+[C:/Users/maxgu/Source/Repos/DB-P-A-Labs/Lab1/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/maxgu/source/repos/DB-P-A-Labs/Lab1/Pages/_ViewStart.cshtml]
+[C:/Users/maxgu/Source/Repos/DB-P-A-Labs/Lab1/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/maxgu/source/repos/DB-P-A-Labs/Lab1/Pages/Shared/_Layout.cshtml]
+[C:/Users/maxgu/Source/Repos/DB-P-A-Labs/Lab1/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-w63aox5a8i

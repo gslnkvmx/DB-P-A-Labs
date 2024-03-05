@@ -1,0 +1,19 @@
+CREATE TABLE IF NOT EXISTS public.saldo
+(
+    apartment integer NOT NULL,
+    insaldo numeric(8,2),
+    outsaldo numeric(8,2),
+    january numeric(8,2),
+    february numeric(8,2),
+    march numeric(8,2),
+    april numeric(8,2),
+    may numeric(8,2),
+    june numeric(8,2),
+    july numeric(8,2),
+    august numeric(8,2),
+    september numeric(8,2),
+    october numeric(8,2),
+    november numeric(8,2),
+    december numeric(8,2),
+    CONSTRAINT saldo_pkey PRIMARY KEY (apartment)
+)

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Q2Ibnd9yL+QO+uXl5t3pX7V5H2n8qkwWxqLgnl1M/hR9OYBIt9ra7R4gZkOtDfdpNNGkSPJWl4+7piM0W+dH8Q==",
+  "dgSpecHash": "qc4iYFH9UHawHD9CRxzROaog2SXWS9bAUIHnzlJ2gAetzz6djEYhr5JgpRJaj7LzUCUr/MQ5TcfnheKw4fsjVg==",
   "success": true,
-  "projectFilePath": "C:\\code projects\\UniLabs\\Lab1\\Lab1.csproj",
+  "projectFilePath": "C:\\Users\\maxgu\\source\\repos\\DB-P-A-Labs\\Lab1\\Lab1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\maxgu\\.nuget\\packages\\dapper\\2.1.28\\dapper.2.1.28.nupkg.sha512",
     "C:\\Users\\maxgu\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",

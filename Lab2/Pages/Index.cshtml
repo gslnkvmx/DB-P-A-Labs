@@ -1,0 +1,146 @@
+﻿@page
+@model Lab2.Pages.IndexModel
+@{
+}
+
+<div class="d-flex justify-content-between">
+    <h3>Список книг</h3>
+    <a href="/">Полный список...</a>
+</div>
+<table class="table">
+    <colgroup>
+        <col span="1" style="width: 15%;">
+        <col span="1" style="width: 15%;">
+        <col span="1" style="width: 15%;">
+        <col span="1" style="width: 15%;">
+        <col span="1" style="width: 40%;">
+    </colgroup>
+    <thead>
+        <tr>
+            <th>
+                <div class="dropdown p-2">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Поиск
+                    </button>
+                    <ul class="dropdown-menu p-2">
+                        <li>
+                            <form method="post" asp-page-handler="name">
+                                <div class="input-group">
+                                    <input type="text" class="dropdown-item form-control" name="bookName"
+                                        placeholder="Название..." required>
+                                    <button type="submit" class="btn btn-primary" data-mdb-ripple-init>
+                                        <img class="img-fluid" src="icons/search.png" style="width:20px" />
+                                    </button>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                Название
+            </th>
+            <th>
+                <div class="dropdown p-2">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Поиск
+                    </button>
+                    <ul class="dropdown-menu p-2">
+                        <li>
+                            <form method="post" asp-page-handler="author">
+                                <div class="input-group">
+                                    <input type="text" class="dropdown-item form-control" name="author"
+                                        placeholder="Автор..." required>
+                                    <button type="submit" class="btn btn-primary" data-mdb-ripple-init>
+                                        <img class="img-fluid" src="icons/search.png" style="width:20px" />
+                                    </button>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                Автор
+            </th>
+            <th>
+                <div class="dropdown p-2">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Поиск
+                    </button>
+                    <ul class="dropdown-menu p-2">
+                        <li>
+                            <form method="post" asp-page-handler="publisher">
+                                <div class="input-group">
+                                    <input type="text" class="dropdown-item form-control" name="publisher"
+                                        placeholder="Издатель..." required>
+                                    <button type="submit" class="btn btn-primary" data-mdb-ripple-init>
+                                        <img class="img-fluid" src="icons/search.png" style="width:20px" />
+                                    </button>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                Издатель
+            </th>
+            <th>
+                <div class="dropdown p-2">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Поиск
+                    </button>
+                    <ul class="dropdown-menu p-2">
+                        <li>
+                            <form method="post" asp-page-handler="year">
+                                <div class="input-group">
+                                    <input type="number" class="dropdown-item form-control" name="year"
+                                        placeholder="Год..." required>
+                                    <button type="submit" class="btn btn-primary" data-mdb-ripple-init>
+                                        <img class="img-fluid" src="icons/search.png" style="width:20px" />
+                                    </button>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                Год
+            </th>
+            <th>
+                <div class="dropdown p-2">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Поиск
+                    </button>
+                    <ul class="dropdown-menu p-2">
+                        <li>
+                            <form method="post" asp-page-handler="annotation">
+                                <div class="input-group">
+                                    <input type="text" class="dropdown-item form-control" name="annotation"
+                                        placeholder="Описание..." required>
+                                    <button type="submit" class="btn btn-primary" data-mdb-ripple-init>
+                                        <img class="img-fluid" src="icons/search.png" style="width:20px" />
+                                    </button>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                Описание
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model.Books)
+        {
+            <tr>
+                <td>@book.Name</td>
+                <td>@book.Author</td>
+                <td>@book.Publisher</td>
+                <td>@book.Year</td>
+                <td>
+                    <div style="overflow: hidden; width: 100 px">@book.Annotation</div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
